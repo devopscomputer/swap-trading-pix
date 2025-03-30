@@ -1,0 +1,23 @@
+@keyframes glint {
+    0% { left: -120%; }
+    8% { left: 50%; }
+    100% { left: 50%; }
+  }
+  
+  @keyframes border-glint {
+    0% { background-position: 0px, -250px; }
+    25% { background-position: 0px, -200px; }
+    75% { background-position: 0px, 50px; }
+    100% { background-position: 0px, 50px; }
+  }
+  
+  .animate-glint {
+    animation: glint 4s linear infinite;
+    animation-delay: -3s;
+  }
+  
+  .animate-border-glint {
+    animation: border-glint 4s linear infinite;
+    animation-delay: 1s;
+  }
+  
