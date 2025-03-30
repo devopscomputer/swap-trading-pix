@@ -64,23 +64,50 @@ body {
   animation-delay: 1s;
 }
 
-/* Variáveis CSS base
-:root {
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --background: #0a0a0a;
-  --foreground: #ededed;
+.boo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.25em;
+  height: 0.25em;
+  border-radius: 50%;
+  box-shadow:
+    0 0 white,
+    10px 5px white,
+    -20px -15px white,
+    30px -25px white,
+    -40px 35px white,
+    50px -45px white,
+    -60px 55px white,
+    70px -65px white,
+    -80px 75px white;
+  animation: boo-rotate 20s linear infinite,
+             boo-pulse 8s ease-in-out infinite;
+  filter: drop-shadow(0 0 6px white);
+  opacity: 0.9;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes boo-rotate {
+  to {
+    transform: rotate(360deg);
   }
 }
-body {
-  background-color: #0a0a0a;
- 
+
+@keyframes boo-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2.15);
+  }
 }
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 
 /* Scrollbar opcional 
 ::-webkit-scrollbar {
